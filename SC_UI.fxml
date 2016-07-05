@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SC_Application.SC_Controller">
+   <center>
+  <AnchorPane id="ap1" minHeight="0.0" minWidth="0.0">
+         <padding>
+            <Insets left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <children>
+            <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ListView id="add_files_list" fx:id="add_files_list" prefHeight="400.0" StackPane.alignment="CENTER" />
+                  <Label id="dd1" fx:id="drag_text" focusTraversable="false" text="Drag your files here" />
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <GridPane hgap="5.0" maxWidth="1.7976931348623157E308">
+        <columnConstraints>
+            <ColumnConstraints fillWidth="false" />
+            <ColumnConstraints fillWidth="false" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+          <ColumnConstraints fillWidth="false" hgrow="NEVER" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        </rowConstraints>
+         <padding>
+            <Insets left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <children>
+            <Button id="save_btn" fx:id="save_btn" mnemonicParsing="false" text="+" GridPane.hgrow="NEVER" />
+            <Button id="delete_btn" fx:id="delete_btn" mnemonicParsing="false" text="-" GridPane.columnIndex="1" />
+            <ComboBox fx:id="line_input" editable="true" maxWidth="1.7976931348623157E308" promptText="Script line template" visibleRowCount="20" GridPane.columnIndex="2" />
+            <Button fx:id="save_script_btn" mnemonicParsing="false" text="Save Script" GridPane.columnIndex="3" GridPane.hgrow="NEVER" />
+         </children>
+      </GridPane>
+   </top>
+   <bottom>
+      <AnchorPane maxHeight="30.0" minHeight="30.0">
+         <children>
+         	<Label id="nameBox" text="ScriptConstructor v1.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="5.0" />
+            <Label id="nameBox" text="dejan.barusic@gmail.com" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
